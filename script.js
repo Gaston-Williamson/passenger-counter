@@ -11,4 +11,6 @@ function increment() {
 function save() {
   let prevCount = count + " -";
   saveEl.innerText += ` ${prevCount}`;
+  countEl.innerText = 0;
+  count = 0;
 }
