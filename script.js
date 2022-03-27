@@ -1,9 +1,14 @@
-let count = 0;
+let countEl = document.getElementById("count-el");
 let saveEl = document.getElementById("save-el");
-let countEL = document.getElementById("count-el");
 
-let myAge = 32;
-let humanDogRatio = 7;
-let myDogAge = myAge * humanDogRatio;
+let count = 0;
 
-console.log(myDogAge);
+function increment() {
+  count += 1;
+  countEl.innerText = count;
+}
+
+function save() {
+  let prevCount = count + " -";
+  saveEl.innerText += ` ${prevCount}`;
+}
